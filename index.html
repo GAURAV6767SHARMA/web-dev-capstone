@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Razor | Your Money. Your Control. Your Future.</title>
+  <meta name="description" content="Razor is a warm, simple fintech dashboard concept for smarter payments and clear financial insights.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-logo" viewBox="0 0 32 32">
+      <rect width="32" height="32" rx="9" fill="currentColor"/>
+      <circle cx="16" cy="16" r="6.5" fill="none" stroke="#fff" stroke-width="3.2"/>
+    </symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 19V5M4 19h16"/><path d="M8 15l4-4 3 3 5-6"/></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></symbol>
+    <symbol id="i-report" viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6z"/><path d="M9 12h6M9 16h6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#home" class="brand" aria-label="Razor home">
+        <img src="razor-mark.png" alt="Razor mark" class="brand-mark">
+        <span>Razor<span class="brand-tm">TM</span></span>
+      </a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-burger">
+        <span class="burger-bar"></span>
+        <span class="burger-bar"></span>
+        <span class="burger-bar"></span>
+        <span class="sr-only">Open menu</span>
+      </label>
+
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#analytics">Analytics</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#" class="nav-login">Login</a>
+        <a href="#get-started" class="btn btn-primary btn-sm">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="badge">The smarter way to manage money</p>
+          <h1>Your Money. Your Control. Your Future.</h1>
+          <p class="lead">Experience smarter payments, seamless transactions, and real-time financial insights, all in one beautifully simple platform.</p>
+          <div class="btn-row">
+            <a href="#get-started" class="btn btn-primary">Start Free Trial</a>
+            <a href="#features" class="btn btn-secondary">Explore Features</a>
+          </div>
+          <p class="trust-note">
+            <svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>
+            Trusted by modern businesses and growing teams.
+          </p>
+        </div>
+
+        <div class="hero-visual">
+          <article class="dash-card balance-card">
+            <p class="card-label">Total balance</p>
+            <p class="balance-value">₹2,45,800</p>
+            <div class="mini-bars" aria-hidden="true">
+              <span style="--h: 45%"></span>
+              <span style="--h: 62%"></span>
+              <span style="--h: 50%"></span>
+              <span style="--h: 74%"></span>
+              <span style="--h: 66%"></span>
+              <span style="--h: 88%"></span>
+            </div>
+          </article>
+
+          <article class="dash-card activity-card">
+            <h2 class="card-title">Recent activity</h2>
+            <ul class="activity-list">
+              <li><span class="tx-mark">Sw</span><span>Swiggy</span><span class="amt-neg">-₹450</span></li>
+              <li><span class="tx-mark">Am</span><span>Amazon</span><span class="amt-neg">-₹2,499</span></li>
+              <li><span class="tx-mark">Sa</span><span>Salary</span><span class="amt-pos">+₹65,000</span></li>
+            </ul>
+          </article>
+
+          <article class="dash-card flow-card">
+            <p class="card-label">Income vs expenses</p>
+            <p class="flow-row"><span>Income</span><strong class="amt-pos">₹85,400</strong></p>
+            <div class="meter meter-income"><span style="--w: 100%"></span></div>
+            <p class="flow-row"><span>Expenses</span><strong class="amt-neg">₹32,650</strong></p>
+            <div class="meter"><span style="--w: 38%"></span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="partners" aria-labelledby="partners-title">
+      <div class="container partners-inner">
+        <p class="partners-label" id="partners-title">Works with the payment methods you already use</p>
+        <ul class="partner-list">
+          <li>Visa</li>
+          <li>Mastercard</li>
+          <li>RuPay</li>
+          <li>PayPal</li>
+          <li>UPI</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section features" id="features">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Features</p>
+          <h2>Everything You Need. Nothing You Don't.</h2>
+          <p>Powerful financial tools designed to simplify the way you manage money.</p>
+        </header>
+
+        <div class="feature-grid">
+          <article class="feature feature-lead">
+            <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span>
+            <h3>Secure Transactions</h3>
+            <p>Payment flows are built around encryption and clear monitoring, so every movement of money stays visible.</p>
+            <ul class="feature-list">
+              <li>Encrypted payment experience</li>
+              <li>Secure transaction monitoring</li>
+              <li>Trust-focused interface</li>
+            </ul>
+          </article>
+
+          <article class="feature">
+            <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg></span>
+            <h3>Real-Time Analytics</h3>
+            <p>Breakdowns and charts that make income and spending easy to read at a glance.</p>
+            <ul class="feature-list">
+              <li>Income and expense breakdown</li>
+              <li>Financial performance overview</li>
+              <li>Interactive-looking charts</li>
+            </ul>
+          </article>
+
+          <article class="feature">
+            <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-card"/></svg></span>
+            <h3>Smart Payments</h3>
+            <p>Manage every payment method in one place and move through payments faster.</p>
+            <ul class="feature-list">
+              <li>Simplified payment management</li>
+              <li>Faster payment workflows</li>
+              <li>Multiple payment methods</li>
+            </ul>
+          </article>
+
+          <article class="feature">
+            <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span>
+            <h3>Mobile Banking Experience</h3>
+            <p>A responsive interface that keeps your account overview within reach on any screen.</p>
+            <ul class="feature-list">
+              <li>Responsive financial interface</li>
+              <li>Easy access across devices</li>
+              <li>User-friendly account overview</li>
+            </ul>
+          </article>
+
+          <article class="feature">
+            <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-report"/></svg></span>
+            <h3>Financial Reports</h3>
+            <p>Monthly summaries and organized records, ready whenever you need your history.</p>
+            <ul class="feature-list">
+              <li>Monthly summaries</li>
+              <li>Transaction history</li>
+              <li>Organized financial records</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section how" id="how-it-works">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">How it works</p>
+          <h2>Getting Started Is Simple.</h2>
+        </header>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step-num">01</span>
+            <h3>Create Your Account</h3>
+            <p>Set up your Razor account with a simple registration process.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">02</span>
+            <h3>Connect Your Payments</h3>
+            <p>Manage your preferred payment methods in one place.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">03</span>
+            <h3>Take Control</h3>
+            <p>Track transactions and understand your financial activity.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section analytics" id="analytics">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Analytics</p>
+          <h2>Make Every Financial Decision Count.</h2>
+          <p>Balances, cash flow, spending, and savings in one dashboard. All figures are illustrative sample data.</p>
+        </header>
+
+        <div class="stat-grid">
+          <article class="stat"><p>Total Balance</p><strong>₹2,45,800</strong></article>
+          <article class="stat"><p>Total Income</p><strong>₹85,400</strong></article>
+          <article class="stat"><p>Total Expenses</p><strong>₹32,650</strong></article>
+          <article class="stat stat-accent"><p>Savings</p><strong>₹52,750</strong></article>
+        </div>
+
+        <div class="dash-grid">
+          <article class="panel">
+            <header class="panel-head">
+              <h3>Monthly overview</h3>
+              <ul class="legend">
+                <li class="lg-income">Income</li>
+                <li class="lg-expense">Expenses</li>
+              </ul>
+            </header>
+            <ul class="bars" aria-label="Income and expenses by month, illustrative data">
+              <li>
+                <div class="bar-pair">
+                  <span class="bar bar-income" style="--h: 64%"></span>
+                  <span class="bar bar-expense" style="--h: 34%"></span>
+                </div>
+                <span class="bar-label">Jun</span>
+              </li>
+              <li>
+                <div class="bar-pair">
+                  <span class="bar bar-income" style="--h: 71%"></span>
+                  <span class="bar bar-expense" style="--h: 38%"></span>
+                </div>
+                <span class="bar-label">Jul</span>
+              </li>
+              <li>
+                <div class="bar-pair">
+                  <span class="bar bar-income" style="--h: 68%"></span>
+                  <span class="bar bar-expense" style="--h: 31%"></span>
+                </div>
+                <span class="bar-label">Aug</span>
+              </li>
+              <li>
+                <div class="bar-pair">
+                  <span class="bar bar-income" style="--h: 80%"></span>
+                  <span class="bar bar-expense" style="--h: 46%"></span>
+                </div>
+                <span class="bar-label">Sep</span>
+              </li>
+              <li>
+                <div class="bar-pair">
+                  <span class="bar bar-income" style="--h: 76%"></span>
+                  <span class="bar bar-expense" style="--h: 37%"></span>
+                </div>
+                <span class="bar-label">Oct</span>
+              </li>
+              <li>
+                <div class="bar-pair">
+                  <span class="bar bar-income" style="--h: 94%"></span>
+                  <span class="bar bar-expense" style="--h: 37%"></span>
+                </div>
+                <span class="bar-label">Nov</span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="panel">
+            <header class="panel-head">
+              <h3>Spending categories</h3>
+            </header>
+            <ul class="categories">
+              <li><span>Bills</span><span>₹9,850</span><span class="meter"><span style="--w: 30%"></span></span></li>
+              <li><span>Shopping</span><span>₹9,400</span><span class="meter"><span style="--w: 29%"></span></span></li>
+              <li><span>Food</span><span>₹6,200</span><span class="meter"><span style="--w: 19%"></span></span></li>
+              <li><span>Other</span><span>₹4,100</span><span class="meter"><span style="--w: 13%"></span></span></li>
+              <li><span>Transport</span><span>₹3,100</span><span class="meter"><span style="--w: 9%"></span></span></li>
+            </ul>
+            <div class="goal">
+              <div class="goal-head">
+                <p>Savings goal: ₹75,000</p>
+                <strong>70%</strong>
+              </div>
+              <div class="meter meter-income meter-lg" role="progressbar" aria-label="Savings goal progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70">
+                <span style="--w: 70%"></span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <article class="panel">
+          <header class="panel-head">
+            <h3>Recent transactions</h3>
+            <p class="muted">November 2026</p>
+          </header>
+          <div class="table-wrap">
+            <table>
+              <caption class="sr-only">Sample recent transactions</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Transaction</th>
+                  <th scope="col">Category</th>
+                  <th scope="col">Date</th>
+                  <th scope="col" class="num">Amount</th>
+                  <th scope="col">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Swiggy</td><td>Food</td><td>22 Nov</td>
+                  <td class="num amt-neg">-₹450</td>
+                  <td><span class="status status-done">Completed</span></td>
+                </tr>
+                <tr>
+                  <td>Amazon</td><td>Shopping</td><td>21 Nov</td>
+                  <td class="num amt-neg">-₹2,499</td>
+                  <td><span class="status status-done">Completed</span></td>
+                </tr>
+                <tr>
+                  <td>Uber</td><td>Transport</td><td>19 Nov</td>
+                  <td class="num amt-neg">-₹320</td>
+                  <td><span class="status status-done">Completed</span></td>
+                </tr>
+                <tr>
+                  <td>Freelance</td><td>Income</td><td>14 Nov</td>
+                  <td class="num amt-pos">+₹12,500</td>
+                  <td><span class="status status-received">Received</span></td>
+                </tr>
+                <tr>
+                  <td>Salary</td><td>Income</td><td>1 Nov</td>
+                  <td class="num amt-pos">+₹65,000</td>
+                  <td><span class="status status-received">Received</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section pricing" id="pricing">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Pricing</p>
+          <h2>Simple Pricing. No Surprises.</h2>
+          <p>Start free, then upgrade when you need deeper analytics and reporting.</p>
+        </header>
+
+        <div class="plan-grid">
+          <article class="plan">
+            <h3 class="plan-name">Basic</h3>
+            <p class="price"><span class="amount">Free</span></p>
+            <ul class="plan-features">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Basic transaction tracking</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Monthly summaries</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Essential payment features</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Standard dashboard</li>
+            </ul>
+            <a href="#get-started" class="btn btn-secondary btn-block">Start for free</a>
+          </article>
+
+          <article class="plan plan-featured">
+            <span class="plan-badge">Most popular</span>
+            <h3 class="plan-name">Pro</h3>
+            <p class="price"><span class="amount">₹499</span><span class="period">/month</span></p>
+            <ul class="plan-features">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Advanced analytics</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Detailed reports</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Smart expense tracking</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Premium dashboard</li>
+            </ul>
+            <a href="#get-started" class="btn btn-light btn-block">Choose Pro</a>
+          </article>
+
+          <article class="plan">
+            <h3 class="plan-name">Business</h3>
+            <p class="price"><span class="amount">₹999</span><span class="period">/month</span></p>
+            <ul class="plan-features">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Business analytics</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Advanced reporting</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Priority support</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Multiple account overview</li>
+            </ul>
+            <a href="#get-started" class="btn btn-secondary btn-block">Contact sales</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="get-started">
+      <div class="container cta-grid">
+        <div>
+          <h2>Take the First Step Towards Smarter Finance.</h2>
+          <p>Bring your payments, insights, and financial goals together with Razor.</p>
+          <a href="#contact" class="btn btn-primary">Get Started Today</a>
+        </div>
+
+        <form class="enquiry-form" id="contact" action="#" method="post">
+          <h3>Send an enquiry</h3>
+          <div class="field">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="plan">Plan you are interested in</label>
+            <select id="plan" name="plan">
+              <option value="basic">Basic (Free)</option>
+              <option value="pro" selected>Pro (₹499/month)</option>
+              <option value="business">Business (₹999/month)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Send enquiry</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="container faq-grid">
+        <header class="section-head">
+          <p class="eyebrow">FAQ</p>
+          <h2>Good questions, clear answers.</h2>
+          <p>Still curious? <a href="#contact" class="text-link">Send us an enquiry</a>.</p>
+        </header>
+
+        <div class="faq-list">
+          <details class="faq-item" name="faq" open>
+            <summary>Is Razor free to use?</summary>
+            <p>Yes. The Basic plan is free and includes transaction tracking, monthly summaries, and the standard dashboard.</p>
+          </details>
+          <details class="faq-item" name="faq">
+            <summary>How secure are transactions?</summary>
+            <p>Payment flows are designed around encryption, and every transaction is shown clearly so unusual activity is easy to spot.</p>
+          </details>
+          <details class="faq-item" name="faq">
+            <summary>Can I track monthly expenses?</summary>
+            <p>Yes. Monthly summaries group your spending by category so you can see where your money goes each month.</p>
+          </details>
+          <details class="faq-item" name="faq">
+            <summary>Does Razor support UPI?</summary>
+            <p>Yes. UPI is listed alongside Visa, Mastercard, RuPay, and PayPal among the supported payment methods.</p>
+          </details>
+          <details class="faq-item" name="faq">
+            <summary>Can I upgrade my plan?</summary>
+            <p>Yes. You can move from Basic to Pro or Business whenever your needs change.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="about">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="brand" aria-label="Razor home">
+          <img src="razor-mark.png" alt="Razor mark" class="brand-mark">
+          <span>Razor<span class="brand-tm">TM</span></span>
+        </a>
+        <p>Razor brings payments, insights, and everyday money decisions into one calm, clear workspace.</p>
+
+        <form class="newsletter" action="#" method="post">
+          <label for="news-email">Subscribe to product updates</label>
+          <div class="newsletter-row">
+            <input id="news-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </div>
+        </form>
+
+        <ul class="social">
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">X</a></li>
+        </ul>
+      </div>
+
+      <nav class="footer-col" aria-labelledby="f-product">
+        <h2 id="f-product">Product</h2>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#analytics">Analytics</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-labelledby="f-company">
+        <h2 id="f-company">Company</h2>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-labelledby="f-support">
+        <h2 id="f-support">Support</h2>
+        <ul>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Razor. Illustrative demo with sample data only.</p>
+      <ul class="legal-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms and Conditions</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>
